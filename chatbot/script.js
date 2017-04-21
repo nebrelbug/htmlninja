@@ -6,7 +6,7 @@ function getResponse {
         if (input === "hi") {
             response = "Hola!";
         }
-        output = "<p>" + response + "</p>";
+        output = $("<p>" + response + "</p>");
 }
 
 
