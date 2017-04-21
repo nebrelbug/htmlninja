@@ -1,5 +1,6 @@
 	var xv = 0;
 	var yv = 0;
+var keyArray = [];
 	function keyTester () {
     if (keys[38]) { //this checks if up arrow is pressed
         yv = yv - 1;
@@ -28,7 +29,7 @@ $(document).ready(function() {
     $(document).keydown(function(key) {
 	    movement();
         switch(parseInt(key.which,10)) {
-			var keyArray = [];
+			
 			// Left arrow key pressed
 			case 37:
 				keyArray[37] = true;
