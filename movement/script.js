@@ -1,4 +1,3 @@
-$(document).ready(function() {
 	var xv = 0;
 	var yv = 0;
 	function keyTester () {
@@ -23,6 +22,9 @@ $(document).ready(function() {
     yv = yv * 0.9;
 	}
 		
+
+$(document).ready(function() {
+
     $(document).keydown(function(key) {
 	    movement();
         switch(parseInt(key.which,10)) {
