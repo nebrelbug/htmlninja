@@ -2,10 +2,11 @@ var input = "not yet";
 var output = 0;
 function getResponse {
     if (input === "not yet") {
-        output = "Say something!";
+        response = "Say something!";
         if (input === "hi") {
-            output = "Hola!";
+            response = "Hola!";
         }
+        output = "<p>" + response + "</p>";
 }
 
 
