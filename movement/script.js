@@ -2,16 +2,16 @@
 	var yv = 0;
 var keyArray = [];
 	function keyTester () {
-    if (keys[38]) { //this checks if up arrow is pressed
+    if (keyArray[38]) { //this checks if up arrow is pressed
         yv = yv - 1;
     }
-    if (keys[40]) {
+    if (keyArray[40]) {
         yv = yv + 1;
     }
-    if (keys[37]) {
+    if (keyArray[37]) {
         xv = xv - 1;
     }
-    if (keys[39]) {
+    if (keyArray[39]) {
         xv = xv + 1;
     }
 }
