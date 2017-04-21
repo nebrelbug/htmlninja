@@ -7,7 +7,7 @@ $(document).ready(function() {
 				break;
 			// Up Arrow Pressed
 			case 38:
-				$('img').css('up', '-=10px');
+				$('img').css('top', '-=10px');
 				break;
 			// Right Arrow Pressed
 			case 39:
@@ -15,7 +15,7 @@ $(document).ready(function() {
 				break;
 			// Down Arrow Pressed
 			case 40:
-				$('img').css('up', '+=10px');
+				$('img').css('top', '+=10px');
 				break;
 		}
 	});
