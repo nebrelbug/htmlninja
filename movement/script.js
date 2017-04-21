@@ -7,15 +7,15 @@ $(document).ready(function() {
 				break;
 			// Up Arrow Pressed
 			case 38:
-				$('img').animate({up: "+=10px"}, 'fast');
+				$('img').css('up', '-=10px');
 				break;
 			// Right Arrow Pressed
 			case 39:
-				$('img').animate({left: "+=10px"}, 'fast');
+				$('img').css('left', '+=10px');
 				break;
 			// Down Arrow Pressed
 			case 40:
-				$('img').animate({up: "-=10px"}, 'fast')
+				$('img').css('up', '+=10px');
 				break;
 		}
 	});
