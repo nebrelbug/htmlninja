@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	var xpos = 0;
-	var ypos = 0;
 	var xv = 0;
 	var yv = 0;
 	function keyTester () {
@@ -16,19 +14,17 @@ $(document).ready(function() {
     if (keys[39]) {
         xv = xv + 1;
     }
-};
+}
 	function movement() {
     keyTester();
-    xpos = xpos + xv; //setting the positions to the positions + movement
-    ypos = ypos + yv;
+    $('img').css('left', '+=' + xv + 'px');
+    $('img').css('top', '+=' + yv + 'px');	
     xv = xv * 0.9; //slowing it down
     yv = yv * 0.9;
-    $('img').css('left', xpos+'px');
-    $('img').css('top', ypos+'px');	
+	}
 		
     $(document).keydown(function(key) {
 	    movement();
-};
         switch(parseInt(key.which,10)) {
 			var keyArray = [];
 			// Left arrow key pressed
