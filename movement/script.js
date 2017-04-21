@@ -27,7 +27,7 @@ var keyArray = [];
 $(document).ready(function() {
 
     $(document).keydown(function(key) {
-	    movement();
+	    
         switch(parseInt(key.which,10)) {
 			
 			// Left arrow key pressed
@@ -47,7 +47,7 @@ $(document).ready(function() {
 				keyArray[40] = true;
 				break;
 		}
-	    
+	    movement();
 
 
 
