@@ -3,7 +3,7 @@ $(document).ready(function() {
         switch(parseInt(key.which,10)) {
 			// Left arrow key pressed
 			case 37:
-				$('img').animate({left: "-=10px"}, 'fast');
+				$('img').css('left', '-=10px');
 				break;
 			// Up Arrow Pressed
 			case 38:
