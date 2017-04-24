@@ -27,30 +27,32 @@ var keyArray = [];
 $(document).ready(function() {
 
     $(document).keydown(function(key) {
-	    
-        switch(parseInt(key.which,10)) {
 			
 			// Left arrow key pressed
-			case 37:
+			if(key===37) {
 				keyArray[37] = true;
-				break;
-			// Up Arrow Pressed
-			case 38:
+			}
+	    		if(key!==37) {
+				keyArray[37] = true;
+			}
+			if(key===38) {
 				keyArray[38] = true;
-				break;
-			// Right Arrow Pressed
-			case 39:
+			}
+			if(key!==37) {
+				keyArray[38] = true;
+			}
+			if(key===39) {
 				keyArray[39] = true;
-				break;
-			// Down Arrow Pressed
-			case 40:
+			}
+			if(key!==37) {
+				keyArray[39] = true;
+			}
+			if(key===40) {
 				keyArray[40] = true;
-				break;
-		}
+			}
+			if(key!==37) {
+				keyArray[40] = true;
+			}
 	    movement();
-
-
-
-
 	});
 });
