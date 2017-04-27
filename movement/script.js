@@ -1,24 +1,24 @@
-	var xv = 0;
+var keys = [];
+var xv = 0;
 	var yv = 0;
-var keyArray = [];
-	function keyTester () {
-    if (keyArray[38]) { //this checks if up arrow is pressed
+	function keyAction () {
+    if (keys[38]) { //this checks if up arrow is pressed
         yv = yv - 1;
     }
-    if (keyArray[40]) {
+    if (keys[40]) {
         yv = yv + 1;
     }
-    if (keyArray[37]) {
+    if (keys[37]) {
         xv = xv - 1;
     }
-    if (keyArray[39]) {
+    if (keys[39]) {
         xv = xv + 1;
     }
 }
 	function movement() {
-    keyTester();
-    $('img').css('left', '+=' + xv + 'px');
-    $('img').css('top', '+=' + yv + 'px');	
+    keyAction();
+    $('#character').css('left', '+=' + xv + 'px');
+    $('#character').css('top', '+=' + yv + 'px');	
     xv = xv * 0.9; //slowing it down
     yv = yv * 0.9;
 	}
@@ -26,33 +26,17 @@ var keyArray = [];
 
 $(document).ready(function() {
 
-    $(document).keydown(function(key) {
-			
-			// Left arrow key pressed
-			if(key===37) {
-				keyArray[37] = true;
-			}
-	    		if(key!==37) {
-				keyArray[37] = true;
-			}
-			if(key===38) {
-				keyArray[38] = true;
-			}
-			if(key!==37) {
-				keyArray[38] = true;
-			}
-			if(key===39) {
-				keyArray[39] = true;
-			}
-			if(key!==37) {
-				keyArray[39] = true;
-			}
-			if(key===40) {
-				keyArray[40] = true;
-			}
-			if(key!==37) {
-				keyArray[40] = true;
-			}
-	    movement();
-	});
+
+$(document).keydown(function (e) {
+    keys[e.which] = true;
+    movement();
+
+});
+
+$(document).keyup(function (e) {
+    delete keys[e.which];
+    
+
+});
+
 });
