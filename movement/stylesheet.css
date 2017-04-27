@@ -1,5 +1,10 @@
-img {
+body {
+    background: rgb(0,0,0);
+}
+
+#character {
     position: relative;
+    background: rgb(255,255,255);
     left: 0;
     top: 0;
 }
