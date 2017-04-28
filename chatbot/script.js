@@ -1,6 +1,6 @@
 var input = "not yet";
 var output = 0;
-function getResponse {
+function getResponse() {
     if (input === "not yet") {
         response = "Say something!";
         if (input === "hi") {
