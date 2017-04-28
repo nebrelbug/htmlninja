@@ -36,7 +36,7 @@ $(document).ready(function() {
 
 $(document).keydown(function (e) {
     keys[e.which] = true;
-	
+	charMove();
 	
 });
 
