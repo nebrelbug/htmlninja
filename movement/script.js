@@ -36,13 +36,14 @@ $(document).ready(function() {
 
 $(document).keydown(function (e) {
     keys[e.which] = true;
+	keyAction();
 	charMove();
 	
 });
 
 $(document).keyup(function (e) {
     delete keys[e.which];
-    
+    keyAction();
 });
 
 });
