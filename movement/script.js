@@ -22,6 +22,13 @@ var xv = 0;
     xv = xv * 0.9; //slowing it down
     yv = yv * 0.9;
 	}
+function charMove() {
+	    if (yv>1||xv>1) {
+    while(yv>1||xv>1) {
+	    movement();
+    }
+    }
+}
 		
 
 $(document).ready(function() {
@@ -29,15 +36,13 @@ $(document).ready(function() {
 
 $(document).keydown(function (e) {
     keys[e.which] = true;
-    while (yv>1||xv>1) {
-    movement();
-    }
+	
+	
 });
 
 $(document).keyup(function (e) {
     delete keys[e.which];
     
-
 });
 
 });
