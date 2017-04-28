@@ -29,8 +29,9 @@ $(document).ready(function() {
 
 $(document).keydown(function (e) {
     keys[e.which] = true;
+    while (yv>1||xv>1) {
     movement();
-
+    }
 });
 
 $(document).keyup(function (e) {
