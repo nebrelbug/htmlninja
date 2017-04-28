@@ -1,4 +1,5 @@
 var keys = [];
+var playing = 1;
 var xv = 0;
 	var yv = 0;
 	function keyAction () {
@@ -22,14 +23,14 @@ var xv = 0;
     xv = xv * 0.9; //slowing it down
     yv = yv * 0.9;
 	}
-function charMove() {
+/*function charMove() {
 	    if (yv>1||xv>1) {
     while(yv>1||xv>1) {
 	    movement();
     }
     }
 }
-		
+	*/	
 
 $(document).ready(function() {
 
@@ -37,7 +38,6 @@ $(document).ready(function() {
 $(document).keydown(function (e) {
     keys[e.which] = true;
 	keyAction();
-	charMove();
 	
 });
 
@@ -46,4 +46,11 @@ $(document).keyup(function (e) {
     keyAction();
 });
 
+	while(playing===1) {
+		keyAction();
+		movement();
+	if(yv>100) {
+		playing = 0;
+	}
+	}
 });
