@@ -38,14 +38,14 @@ $(document).ready(function() {
 $(document).keydown(function (e) {
     keys[e.which] = true;
 	keyAction();
-	
+	movement();
 });
 
 $(document).keyup(function (e) {
     delete keys[e.which];
     keyAction();
 });
-
+/*
 	while(playing===1) {
 		keyAction();
 		movement();
@@ -53,4 +53,5 @@ $(document).keyup(function (e) {
 		playing = 0;
 	}
 	}
+	*/
 });
