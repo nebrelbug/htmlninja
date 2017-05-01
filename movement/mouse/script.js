@@ -48,5 +48,6 @@ $( "body" ).mouseover(function() {
 	  directions[4]=false;
 	 }
 movement();
+	$('#directions').html(directions);
 });
 });
