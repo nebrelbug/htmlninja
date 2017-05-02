@@ -1,4 +1,4 @@
-var directions = [];
+var directions = [0,0,0,0];
 var playing = 1;
 var xv = 0;
 var yv = 0;
@@ -29,24 +29,17 @@ $(document).ready(function() {
 $( "body" ).mouseover(function() {
   if(event.pageX<xv) {
 	  directions[1]=true;
-  } else {
-	  directions[1]=false;
-	 }
-	if(event.pageX>xv) {
-	  directions[3]=true;
-  } else {
 	  directions[3]=false;
-	 }
-	if(event.pageY>yv) {
+  } if(event.pageX>xv) {
+	  directions[3]=true;
+	  directions[1]=false;
+  }if(event.pageY>yv) {
 	  directions[2]=true;
-  } else {
-	  directions[2]=false;
-	 }
-	if(event.pageY<yv) {
-	  directions[4]=true;
-  } else {
 	  directions[4]=false;
-	 }
+  }if(event.pageY<yv) {
+	  directions[4]=true;
+	  directions[2]=false;
+  }
 movement();
 	$('#directions').html(directions);
 });
