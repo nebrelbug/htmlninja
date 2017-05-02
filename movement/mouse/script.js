@@ -26,7 +26,7 @@ var yv = 0;
 	}
 
 $(document).ready(function() {
-$( "body" ).mouseover(function() {
+$( document ).on( "mousemove", function( event ) {
   if(event.pageX<xv) {
 	  directions[1]=true;
 	  directions[3]=false;
