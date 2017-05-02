@@ -42,6 +42,6 @@ $( document ).on( "mousemove", function( event ) {
   }
 movement();
 	$('#directions').html(directions);
-	$('#coordinates').html(event.pageX + ',' event.pageY);
+	$('#coordinates').html(event.pageX + ',' + event.pageY);
 });
 });
