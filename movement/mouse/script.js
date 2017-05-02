@@ -21,8 +21,8 @@ var yv = 0;
     mouseAction();
     $('#character').css('left', '+=' + (xv+200) + 'px');
     $('#character').css('top', '+=' + (yv+200) + 'px');	
-    xv = xv * 0.9; //slowing it down
-    yv = yv * 0.9;
+    xv = xv * 0.01; //slowing it down
+    yv = yv * 0.01;
 	}
 
 $(document).ready(function() {
