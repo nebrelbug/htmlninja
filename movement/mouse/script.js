@@ -5,16 +5,16 @@ var yv = 0;
 
 	function mouseAction () {
     if (directions[2]) { //this checks if up arrow is pressed
-        yv = yv - 1;
+        yv = yv - 0.01;
     }
     if (directions[4]) {
-        yv = yv + 1;
+        yv = yv + 0.01;
     }
     if (directions[1]) {
-        xv = xv - 1;
+        xv = xv - 0.01;
     }
     if (directions[3]) {
-        xv = xv + 1;
+        xv = xv + 0.01;
     }
 }
 	function movement() {
