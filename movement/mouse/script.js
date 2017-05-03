@@ -54,7 +54,7 @@ $( document ).on( "mousemove", function( event ) {
 movement();
 	$('#directions').html(directions);
 	$('#coordinates').html(event.pageX + ',' + event.pageY);
-	if(coordinate.left<600) {
+	if(coordinate.left>600) {
 		playing = 0;
 	}
 	}
