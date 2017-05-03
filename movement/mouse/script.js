@@ -2,6 +2,10 @@ var directions = [0,0,0,0];
 var playing = 1;
 var xv = 0;
 var yv = 0;
+$( "#character" ).offset({ top: 200, left: 200 });
+	var coordinate = $("#character").offset();
+	var xCoordinate = coordinate.left;
+	var yCoordinate = coordinate.top;
 
 	function mouseAction () {
     if (directions[2]) { //this checks if up arrow is pressed
@@ -29,10 +33,6 @@ var yv = 0;
 	}
 
 $(document).ready(function() {
-	$( "#character" ).offset({ top: 200, left: 200 });
-	var coordinate = $("#character").offset();
-	var xCoordinate = coordinate.left;
-	var yCoordinate = coordinate.top;
 $( document ).on( "mouseover", function( event ) {
 	coordinate = $("#character").offset();	
   if(event.pageX<coordinate.left) {
