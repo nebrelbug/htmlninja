@@ -42,11 +42,11 @@ $( document ).on( "mousemove", function( event ) {
 	  directions[3]=true;
 	  directions[1]=false;
   }if(event.pageY>coordinate.top) {
-	  directions[2]=true;
-	  directions[4]=false;
-  }if(event.pageY<coordinate.top) {
 	  directions[4]=true;
 	  directions[2]=false;
+  }if(event.pageY<coordinate.top) {
+	  directions[2]=true;
+	  directions[4]=false;
   }
 movement();
 	$('#directions').html(directions);
