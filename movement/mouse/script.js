@@ -34,7 +34,7 @@ var yv = 0;
 
 	
 $( document ).on( "mousemove", function( event ) {
-	while(event.pageX<coordinate.left.ceil()+1 && event.pageX>coordinate.left.ceil()-2 && event.pageY<coordinate.top.ceil()+1 && event.pageY>coordinate.top.ceil()-2 &&) {
+	while(event.pageX<coordinate.left.ceil()+1 && event.pageX>coordinate.left.ceil()-2 && event.pageY<coordinate.top.ceil()+1 && event.pageY>coordinate.top.ceil()-2) {
 	coordinate = $("#character").offset();	
   if(event.pageX<coordinate.left) {
 	  directions[1]=true;
