@@ -33,7 +33,7 @@ var yv = 0;
 	}
 
 	
-$( document ).on( "mouseover", function( event ) {
+$( document ).on( "mousemove", function( event ) {
 	coordinate = $("#character").offset();	
   if(event.pageX<coordinate.left) {
 	  directions[1]=true;
