@@ -5,8 +5,8 @@ var yv = 0;
 var character = $("#character");
 $( character ).offset({ top: 200, left: 200 });
 	var coordinate = character.offset();
-	var xCoordinate = coordinate.left;
-	var yCoordinate = coordinate.top;
+	var xCoordinate = character.offset().left;
+	var yCoordinate = character.offset().top;
 
 	function mouseAction () {
     if (directions[2]) { //this checks if up arrow is pressed
