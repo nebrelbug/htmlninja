@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	
+	var coordinate = $("#character").offset();
+	var xCoordinate = coordinate.left;
+	var yCoordinate = coordinate.top;
 	var directions = [0,0,0,0];
 var playing = 1;
 var xv = 0;
@@ -32,7 +34,7 @@ var yv = 0;
 
 	
 $( document ).on( "mouseover", function( event ) {
-	var coordinate = character.offset();	
+	coordinate = $("#character").offset();	
   if(event.pageX<coordinate.left) {
 	  directions[1]=true;
 	  directions[3]=false;
