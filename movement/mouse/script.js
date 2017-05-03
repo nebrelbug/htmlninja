@@ -35,7 +35,8 @@ var yv = 0;
 	var cLeft = coordinate.left;
 	var cTop = coordinate.top;
 $( document ).on( "mousemove", function( event ) {
-	while(event.pageX<Math.ceil(cLeft)+1 && event.pageX>Math.ceil(cLeft)-2 && event.pageY<Math.ceil(cTop)+1 && event.pageY>Math.ceil(cTop)-2) {
+	//while(event.pageX<Math.ceil(cLeft)+1 && event.pageX>Math.ceil(cLeft)-2 && event.pageY<Math.ceil(cTop)+1 && event.pageY>Math.ceil(cTop)-2) {
+	while(playing ===1) {
 	coordinate = $("#character").offset();	
   if(event.pageX<coordinate.left) {
 	  directions[1]=true;
@@ -53,6 +54,9 @@ $( document ).on( "mousemove", function( event ) {
 movement();
 	$('#directions').html(directions);
 	$('#coordinates').html(event.pageX + ',' + event.pageY);
+	if(coordinate.left<600) {
+		playing = 0;
+	}
 	}
 });
 });
