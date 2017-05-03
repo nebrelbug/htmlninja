@@ -32,9 +32,10 @@ var yv = 0;
     yv = yv * 0.9;
 	}
 
-	
+	var cLeft = coordinate.left;
+	var cTop = coordinate.top;
 $( document ).on( "mousemove", function( event ) {
-	while(event.pageX<coordinate.left.ceil()+1 && event.pageX>coordinate.left.ceil()-2 && event.pageY<coordinate.top.ceil()+1 && event.pageY>coordinate.top.ceil()-2) {
+	while(event.pageX<cLeft.ceil()+1 && event.pageX>cLeft.ceil()-2 && event.pageY<cTop.ceil()+1 && event.pageY>cTop.ceil()-2) {
 	coordinate = $("#character").offset();	
   if(event.pageX<coordinate.left) {
 	  directions[1]=true;
