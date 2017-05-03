@@ -5,24 +5,24 @@ var yv = 0;
 
 	function mouseAction () {
     if (directions[2]) { //this checks if up arrow is pressed
-        yv = yv - 0.01;
+        yv = yv - 0.5;
     }
     if (directions[4]) {
-        yv = yv + 0.01;
+        yv = yv + 0.5;
     }
     if (directions[1]) {
-        xv = xv - 0.01;
+        xv = xv - 0.5;
     }
     if (directions[3]) {
-        xv = xv + 0.01;
+        xv = xv + 0.5;
     }
 }
 	function movement() {
     mouseAction();
-    $('#character').css('left', '+=' + (xv+200) + 'px');
-    $('#character').css('top', '+=' + (yv+200) + 'px');	
-    xv = xv * 0.01; //slowing it down
-    yv = yv * 0.01;
+    $('#character').css('left', '+=' + xv + 'px');
+    $('#character').css('top', '+=' + yv + 'px');	
+    xv = xv * 0.9; //slowing it down
+    yv = yv * 0.9;
 	}
 
 $(document).ready(function() {
