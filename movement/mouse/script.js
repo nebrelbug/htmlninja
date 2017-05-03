@@ -27,7 +27,7 @@ var yv = 0;
     $('#character').css('top', '+=' + yv + 'px');*/
     xCoordinate+=xv;
     yCoordinate+=yv;
-    $( "#character" ).offset({ top: xCoordinate, left: yCoordinate });
+    $( "#character" ).offset({ top: yCoordinate, left: xCoordinate });
     xv = xv * 0.9; //slowing it down
     yv = yv * 0.9;
 	}
