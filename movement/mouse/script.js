@@ -32,7 +32,7 @@ var yv = 0;
 
 	
 $( document ).on( "mouseover", function( event ) {
-	coordinate = character.offset();	
+	var coordinate = character.offset();	
   if(event.pageX<coordinate.left) {
 	  directions[1]=true;
 	  directions[3]=false;
