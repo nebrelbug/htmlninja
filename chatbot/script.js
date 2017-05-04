@@ -14,8 +14,8 @@ function getResponse() {
 
 $(document).ready(function() {
     $('#button').click(function() {
-        getResponse();
         input = $('input[name=checkListItem]').val();
+        getResponse();
         $('.list').append('<div class="item">' + output + '</div>');
     });
 });
