@@ -10,10 +10,9 @@ function getResponse() {
 }
 
 
-$(document).ready(function() {
+$$(document).ready(function() {
     $('#button').click(function() {
-        var input = $('input[name=checkListItem]').val();
-        getResponse();
-        $("#response").html(output);
+        input = $('input[name=checkListItem]').val();
+        $('.list').append('<div class="item">' + output + '</div>');
     });
 });
