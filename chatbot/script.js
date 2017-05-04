@@ -10,7 +10,7 @@ function getResponse() {
 }
 
 
-$$(document).ready(function() {
+$(document).ready(function() {
     $('#button').click(function() {
         input = $('input[name=checkListItem]').val();
         $('.list').append('<div class="item">' + output + '</div>');
