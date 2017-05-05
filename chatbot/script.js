@@ -22,10 +22,10 @@ $(document).ready(function() {
     $( "#checkListItem" ).keypress(function( event ) {
   if ( event.which == 13 ) {
      event.preventDefault();
-     $( "#button").click();
+     $( "#submit").click();
   }
 });
-    $('#button').click(function() {
+    $('#submit').click(function() {
         input = $('input[name=checkListItem]').val();
         getResponse();
         $('.list').append('<div class="item">' + output + '</div>');
