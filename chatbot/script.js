@@ -13,6 +13,8 @@ function getResponse() {
         output = "9";
     }if (input === "What's your favorite color?") {
             output = "Green!";
+    } else {
+        output = "I don't know.";
     }
         //output = $("<p>" + response + "</p>");
 }
