@@ -3,10 +3,16 @@ var output = 0;
 function getResponse() {
     if (input === "not yet") {
         output = "Say something!";
-    }if (input === "Hi") {
+    }if (input === "Hi!") {
             output = "Hola!";
     }if (input === "How are you?") {
         output = "Good!";
+    }if (input === "2+2") {
+            output = "4";
+    }if (input === "3*3") {
+        output = "9";
+    }if (input === "What's your favorite color?") {
+            output = "Green!";
     }
         //output = $("<p>" + response + "</p>");
 }
