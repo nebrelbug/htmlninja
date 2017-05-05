@@ -13,6 +13,12 @@ function getResponse() {
 
 
 $(document).ready(function() {
+    $( "#checkListItem" ).keypress(function( event ) {
+  if ( event.which == 13 ) {
+     event.preventDefault();
+     $( "#button").click();
+  }
+});
     $('#button').click(function() {
         input = $('input[name=checkListItem]').val();
         getResponse();
