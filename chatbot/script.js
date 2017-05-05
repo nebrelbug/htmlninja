@@ -3,7 +3,7 @@ var output = 0;
 function getResponse() {
     if (input === "not yet") {
         output = "Say something!";
-    }if (input === "Hi!") {
+    }if (input === "hi") {
             output = "Hola!";
     }if (input === "How are you?") {
         output = "Good!";
@@ -25,9 +25,9 @@ $(document).ready(function() {
      $( "#submit").click();
   }
 });
-    $('#submit').click(function() {
-        input = $('input[name=checkListItem]').val();
+    $("#submit").click(function() {
+        input = $("input[name=checkListItem]").val();
         getResponse();
-        $('.list').append('<div class="item">' + output + '</div>');
+        $(".list").append("<div class='item'>" + output + '</div>');
     });
 });
