@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'George1';
-    src: url('subset-George1.woff2') format('woff2');
+    src: url('https://github.com/nebrelbug/htmlninja/blob/master/George1Medium.woff2?raw=true') format('woff2');
     font-weight: 500;
     font-style: normal;
 }
